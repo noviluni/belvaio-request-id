@@ -1,0 +1,20 @@
+# Optionals
+sentry-sdk
+
+# Testing
+pytest
+pytest-aiohttp
+pytest-mock
+pytest-cov
+check-manifest
+
+# Linting
+autoflake
+black
+isort
+mypy
+
+# Documentation
+mkdocs
+mkdocs-material
+mkautodoc

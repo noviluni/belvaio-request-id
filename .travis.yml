@@ -1,0 +1,23 @@
+dist: bionic
+language: python
+cache: pip
+python:
+- 3.8
+- 3.7
+before_install:
+- pip install -U pip
+install:
+- pip install codecov tox-travis
+script: tox
+after_script:
+- codecov
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: mcanaves
+  password:
+    secure: px+xs2zdyXGWOdBcv0IPSVtSiIr4nZyAzB+swwcfMX1BTw+4QS6o3zDb4S/zrx0IUwz00BES/a/7mTvjOaO0dnYDjyKeC8caXclXImZIXD+V7yYUgSe/EMhbi12TUz1BQXJgArFSxMDo5Cl1ey69VDSrv+gaoMDnc8tb5uBZqjlkdawsLoHZo5ueXtsWxT+8jXFUxCiLFYhCh8FUqHn5XIHag9kyE8IWXFw1UGvGfToiTqy7YWUuEnHdW3wpCWC6voqLlvcVYZgjzlzi6KeMJkzxNSqEtvXfUhKWqsePtSI0+jObOOoA2euFnc126Q71rEaAw/lHrpGoLwuz8atOLFLDqwf+7RawuiujwjSzosnMB6CsX9NSURC00HVjuZf23+LbsM3w2LGpvxOF2xUPVxsAX0IUU9o8u77gitvB49P8/WFpX7xovLyGhOXJf88R+YS2lnj5dmrXanlasYY5Dvz2+ZKLePa0j+0FEASmBqGaGB/N8eVBGh/RGWcfKFy4QwvP4XJoczMIvbiQ7mcCGSbulF6OsqdWBIHh42wZTsPJM90RwC8T11hE7WuWbDWY7J7kNL4axAEvW+JGkmYLlfMOQn8l5CrBSjeW/52/pNmZ9YF1pabosXTbi0E3/AbtzMQqHoezfDzlhak2eqRQ586R/GsMHqXVOHi/S+ZhfII=
+  on:
+    tags: true
+    repo: belvo-finance/belvaio-request-id
+    python: 3.8

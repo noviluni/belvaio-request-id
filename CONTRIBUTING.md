@@ -7,7 +7,7 @@ To submit new code to the project you'll need to:
 
 * Fork the repo.
 * Clone your fork on your local computer: `git clone https://github.com/<username>/belvaio-request-id.git`.
-* Install Belvaio Request Id locally and run the tests: `./scripts/install`, `./scripts/test`.
+* Install Belvaio Request Id locally and run the tests: `make install`, `make test`.
 * Create a branch for your work, e.g. `git checkout -b fix-some-bug`.
 * Remember to include tests and documentation updates if applicable.
 * Once ready, push to your remote: `git push origin fix-some-bug`.
@@ -20,7 +20,7 @@ To submit new code to the project you'll need to:
 Use the `install` script to install project dependencies in a virtual environment.
 
 ```bash
-./scripts/install
+$ make install
 ```
 
 ## Running the tests
@@ -32,7 +32,7 @@ The tests are written using [pytest] and located in the `tests/` directory.
 We provide a stand-alone **test script** to run tests in a reliable manner. Run it with:
 
 ```bash
-./scripts/test
+$ make test
 ```
 
 ## Linting
@@ -40,10 +40,10 @@ We provide a stand-alone **test script** to run tests in a reliable manner. Run 
 We use [Black][black] as a code formatter. To run it along with a few other linting tools, we provide a stand-alone linting script:
 
 ```bash
-./scripts/lint
+$ make lint
 ```
 
-If linting has anything to say about the code, it will format it in-place.
+If linting has anything to say about the code, you can use `fix=yes` command option to format it in-place.
 
 To keep the code style consistent, you should apply linting before committing.
 
@@ -51,7 +51,11 @@ To keep the code style consistent, you should apply linting before committing.
 
 The documentation is built with [MkDocs], a Markdown-based documentation site generator.
 
-To run the docs site in hot-reload mode (useful when editing the docs), run `$ mkdocs serve` in the project root directory.
+To run the docs site in hot-reload mode (useful when editing the docs), run:
+
+```bash
+$ make serve
+```
 
 For your information, the docs site configuration is located in the `mkdocs.yml` file.
 

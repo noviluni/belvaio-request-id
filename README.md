@@ -22,7 +22,7 @@ Belvaio Request Id is an [`aiohttp`][aiohttp] utils that help us to track reques
 ## Installation
 
 ```shell
-$ pip3 install belvaio-request-id
+$ pip install belvaio-request-id
 ```
 
 ## Example

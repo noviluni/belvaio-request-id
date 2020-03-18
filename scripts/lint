@@ -1,0 +1,18 @@
+#!/bin/sh -e
+
+export PREFIX=""
+if [ -d 'venv' ] ; then
+    export PREFIX="venv/bin/"
+fi
+
+if [ "$1" = "yes" ]
+then
+    ${PREFIX}autoflake --in-place --recursive belvaio_request_id tests setup.py
+    ${PREFIX}black belvaio_request_id tests setup.py
+    ${PREFIX}isort -rc -y belvaio_request_id tests setup.py
+else
+    ${PREFIX}mypy belvaio_request_id --ignore-missing-imports
+    ${PREFIX}autoflake --recursive belvaio_request_id tests setup.py
+    ${PREFIX}black --check belvaio_request_id tests setup.py
+    ${PREFIX}isort --check-only -rc belvaio_request_id tests setup.py
+fi
