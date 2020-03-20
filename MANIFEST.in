@@ -8,10 +8,8 @@ exclude .coveragerc
 exclude .editorconfig
 exclude *.cfg
 exclude *.yml
-exclude docs
 exclude scripts
 exclude tests
-recursive-exclude docs *.md
 recursive-exclude scripts *
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]

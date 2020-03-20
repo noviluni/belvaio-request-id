@@ -41,9 +41,6 @@ coverage.xml
 venv/
 ENV/
 
-# mkdocs documentation
-/site
-
 # mypy
 .mypy_cache/
 

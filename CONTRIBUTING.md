@@ -9,7 +9,7 @@ To submit new code to the project you'll need to:
 * Clone your fork on your local computer: `git clone https://github.com/<username>/belvaio-request-id.git`.
 * Install Belvaio Request Id locally and run the tests: `make install`, `make test`.
 * Create a branch for your work, e.g. `git checkout -b fix-some-bug`.
-* Remember to include tests and documentation updates if applicable.
+* Remember to include tests if applicable.
 * Once ready, push to your remote: `git push origin fix-some-bug`.
 * [Open a Pull Request][pull-request].
 
@@ -47,23 +47,8 @@ If linting has anything to say about the code, you can use `fix=yes` command opt
 
 To keep the code style consistent, you should apply linting before committing.
 
-## Documentation
-
-The documentation is built with [MkDocs], a Markdown-based documentation site generator.
-
-To run the docs site in hot-reload mode (useful when editing the docs), run:
-
-```bash
-$ make serve
-```
-
-For your information, the docs site configuration is located in the `mkdocs.yml` file.
-
-Please refer to the [MkDocs docs][MkDocs] for more usage information, including how to add new pages.
-
 [issues]: https://github.com/belvo-finance/belvaio-request-id/issues/new
 [pull-request]: https://github.com/belvo-finance/belvaio-request-id/compare
 [pytest]: https://docs.pytest.org
 [pytest-cov]: https://github.com/pytest-dev/pytest-cov
 [black]: https://github.com/psf/black
-[MkDocs]: https://www.mkdocs.org
