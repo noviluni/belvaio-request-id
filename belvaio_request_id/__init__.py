@@ -2,4 +2,4 @@
 
 __author__ = """Belvo Finance, S.L."""
 __email__ = "hello@belvo.co"
-__version__ = "0.1.0"
+__version__ = "0.1.1"
