@@ -1,4 +1,3 @@
-from contextlib import ExitStack
 from typing import Callable
 
 from aiohttp.web import middleware
@@ -9,6 +8,7 @@ from belvaio_request_id.utils import get_request_id, reset_request_id, set_reque
 
 try:
     import sentry_sdk
+    from sentry_sdk import configure_scope
 except ImportError:  # pragma: nocover
     sentry_sdk = None  # type: ignore
 
@@ -20,9 +20,8 @@ async def request_id_middleware(
     request_id_token = set_request_id(request.headers.get("X-Request-Id"))
     request_id = get_request_id()
     try:
-        with ExitStack() as stack:
-            if sentry_sdk:
-                scope = stack.enter_context(sentry_sdk.push_scope())
+        if sentry_sdk:
+            with configure_scope() as scope:
                 scope.set_tag("request_id", request_id)
         response = await handler(request)
         response.headers["X-Request-Id"] = get_request_id()
