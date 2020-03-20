@@ -20,7 +20,7 @@ To submit new code to the project you'll need to:
 Use the `install` script to install project dependencies in a virtual environment.
 
 ```bash
-$ make install
+make install
 ```
 
 ## Running the tests
@@ -32,7 +32,7 @@ The tests are written using [pytest] and located in the `tests/` directory.
 We provide a stand-alone **test script** to run tests in a reliable manner. Run it with:
 
 ```bash
-$ make test
+make test
 ```
 
 ## Linting
@@ -40,7 +40,7 @@ $ make test
 We use [Black][black] as a code formatter. To run it along with a few other linting tools, we provide a stand-alone linting script:
 
 ```bash
-$ make lint
+make lint
 ```
 
 If linting has anything to say about the code, you can use `fix=yes` command option to format it in-place.
