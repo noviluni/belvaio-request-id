@@ -13,8 +13,3 @@ autoflake
 black
 isort
 mypy
-
-# Documentation
-mkdocs
-mkdocs-material
-mkautodoc

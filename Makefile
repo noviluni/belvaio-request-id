@@ -20,10 +20,6 @@ test: ## Run all or specific tests. Arguments: name=NAME-OF-TEST will run a spec
 lint: ## Check of fix code linting using black and isort. Arguments: fix=yes will force changes.
 	./scripts/lint $(fix)
 
-.PHONY: serve
-serve: ## Run the docs site in hot-reload mode
-	./scripts/docs
-
 ##@ 🧹 Tidying
 
 .PHONY: clean
