@@ -99,10 +99,19 @@ if __name__ == "__main__":
 
 ## Contributing
 
-The Belvo team happily welcomes contributions. [Guidelines][guidelines] will help you get ready to contribute to this project!
+The Belvo team happily welcomes contributions.
+If you wish to submit a pull request, please be sure check the items on this list:
+- [ ] Tests related to the changed code were executed
+- [ ] The source code has been coded following the OWASP security best practices (https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf).
+- [ ] Commit message properly labeled
+- [ ] There is a ticket associated to each PR.
+
+[Guidelines][guidelines] will help you get ready to contribute to this project!
 
 [aiohttp]: https://docs.aiohttp.org/en/stable/index.html
 [guidelines]: https://github.com/belvo-finance/belvaio-request-id/blob/master/CONTRIBUTING.md
 [access-logs]: https://docs.aiohttp.org/en/stable/logging.html#access-logs
 [sentry-aiohttp]: https://docs.sentry.io/platforms/python/aiohttp/
 [motivation]: https://github.com/Skyscanner/aiotask-context
+
+ 
