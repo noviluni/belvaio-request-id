@@ -9,7 +9,7 @@ Belvaio Request Id is an [aiohttp][aiohttp] set of utils that help us to track r
 
 1. **`request_id_middleware`**: aiohttp middleware that generate random `request_id` or read it from `X-Request-Id` header for each http request.
 
-2. **`RequestIdFilter`**: logging filter that allow attach `request_id` to every logging record.
+2. **`RequestIdFilter`**: logging filter that allow to attach `request_id` to every logging record.
 
 3. **`RequestIdAccessLogger`**: add `request_id` to aiohttp access log. This log message is logged outside the scope where we set the context var that store the `request_id`, so we need to define our own [AccessLogger][access-logs] that fixes this.
 
@@ -114,4 +114,3 @@ If you wish to submit a pull request, please be sure check the items on this lis
 [sentry-aiohttp]: https://docs.sentry.io/platforms/python/aiohttp/
 [motivation]: https://github.com/Skyscanner/aiotask-context
 
- 
